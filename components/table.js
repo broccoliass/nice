@@ -6,8 +6,7 @@ import { toggleChangeAction, updateAction, deleteAction } from '../redux/reducer
 
 export default function Table(){
 
-    const { isLoading, isError, error } = useQuery('users', getUsers)
-    const data = [];
+    const { isLoading, isError, error, data } = useQuery('users', getUsers)
     
     if(isLoading) return <div>Employee is Loading...</div>;
     if(isError) return <div>Got Error {error}</div>

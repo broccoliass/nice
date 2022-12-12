@@ -14,7 +14,7 @@ export default function Home() {
   const visible = useSelector((state) => state.app.client.toggleForm)
   const deleteId = useSelector(state => state.app.client.deleteId)
   const queryclient = useQueryClient();
-
+ 
   const dispatch = useDispatch()
 
   const handler = () => {
@@ -28,7 +28,6 @@ export default function Home() {
       await dispatch(deleteAction(null))
     }
   }
-
   const canclehandler = async () => {
     console.log("cancel")
     await dispatch(deleteAction(null))
